@@ -16,7 +16,9 @@ app.use(cors());
 
 
 app.use("/users",userRoute)
-
+app.get("/",(req,res)=>{
+    res.send("Homepage")
+})
 
 app.use(authenticate)
 app.use("/posts",postRoute)
